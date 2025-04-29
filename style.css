@@ -1,0 +1,389 @@
+/* Base Styles & Mobile First */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Remove extra space below images */
+}
+
+button, .buy-button {
+    cursor: pointer;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #ff0000;
+    color: white;
+    text-align: center;
+    display: block;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+button:hover, .buy-button:hover {
+    background-color: #cc0000;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to bottom, #ffcccc, #ff0000);
+    padding: 20px 15px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: #000;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+header .subtitle a {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Video Section */
+.video-section {
+    background-color: #ff0000;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 90%;
+    margin: 0 auto 20px auto;
+    background-color: #000;
+    border: 3px solid white;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.cta-arrow h2 {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    padding: 0 15px;
+}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #fff;
+    margin: 0 auto 20px;
+}
+
+/* Pricing Section */
+.pricing-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 15px;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+    margin-top: -20px;
+}
+
+.pricing-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: url('images/wave.png') repeat-x;
+    background-size: contain;
+    z-index: -1;
+}
+
+.pricing-card {
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+.card-header {
+    background-color: #ff0000;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.card-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.product-image {
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.price-container {
+    padding: 15px;
+    text-align: center;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.currency, .per {
+    font-size: 1.2rem;
+}
+
+.amount {
+    font-size: 2.5rem;
+}
+
+.savings {
+    color: #ff0000;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.total {
+    margin: 10px 0;
+}
+
+.original {
+    color: #999;
+}
+
+.discounted {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.benefits {
+    list-style-type: none;
+    padding: 0 15px;
+    margin: 0 0 20px 0;
+}
+
+.benefits li {
+    padding: 8px 0;
+    position: relative;
+    padding-left: 25px;
+}
+
+.benefits li::before {
+    content: "✓";
+    color: #ff0000;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.payment-methods {
+    padding: 15px;
+    text-align: center;
+}
+
+.free-shipping {
+    text-align: center;
+    font-weight: bold;
+    color: #ff0000;
+    margin: 10px 0;
+    padding-bottom: 15px;
+}
+
+/* Universities Section */
+.universities-section {
+    padding: 30px 15px;
+    background-color: #f8f8f8;
+}
+
+.university-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.university-logos img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* References Section */
+.references-section {
+    padding: 20px 15px;
+    background-color: #fff;
+}
+
+.references p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.references strong {
+    font-weight: bold;
+}
+
+.references em {
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    padding: 20px 15px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.footer-links {
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: #666;
+    margin: 0 5px;
+}
+
+.disclaimer p {
+    font-size: 0.8rem;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.fda {
+    font-weight: bold;
+    color: #666;
+    margin-top: 20px;
+}
+
+.legal {
+    font-size: 0.7rem;
+    text-align: justify;
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+    
+    header .subtitle a {
+        font-size: 1.4rem;
+    }
+    
+    .video-container {
+        max-width: 80%;
+    }
+    
+    .cta-arrow h2 {
+        font-size: 1.8rem;
+    }
+    
+    .pricing-section {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .pricing-card {
+        width: calc(50% - 20px);
+        margin-bottom: 20px;
+    }
+    
+    .university-logos img {
+        height: 50px;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+    header h1 {
+        font-size: 2.5rem;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .video-container {
+        max-width: 70%;
+    }
+    
+    .pricing-section {
+        padding: 40px 20px;
+    }
+    
+    .pricing-card {
+        width: calc(33.333% - 20px);
+    }
+    
+    .university-logos {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    
+    .university-logos img {
+        height: 60px;
+    }
+    
+    .references-section {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    
+    .footer-links, .disclaimer {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+}
+
+/* Large Desktop Styles */
+@media (min-width: 1440px) {
+    .video-container {
+        max-width: 60%;
+    }
+    
+    .pricing-section, .universities-section, .references-section, footer {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
